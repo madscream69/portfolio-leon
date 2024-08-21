@@ -1,0 +1,38 @@
+$grey: #b6b6b6;
+$black: #171719;
+
+@font-face {
+    font-family: 'TRYGrtskBoldExa';
+    src: url(../fonts/TRYGrtsk-BoldExa.woff) format(woff);
+    src: url(../fonts/TRYGrtsk-BoldExa.woff2) format(woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'TRYGrtskMediumExa';
+    src: url(../fonts/TRYGrtsk-MediumExa.woff) format(woff);
+    src: url(../fonts/TRYGrtsk-MediumExa.woff2) format(woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'TRYGrtskSemiBoldExa';
+    src: url(../fonts/TRYGrtsk-SemiBoldExa.woff) format(woff);
+    src: url(../fonts/TRYGrtsk-SemiBoldExa.woff2) format(woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'TRYGrtskSemiBoldGiga';
+    src: url(../fonts/TRYGrtsk-SemiBoldGiga.woff) format(woff);
+    src: url(../fonts/TRYGrtsk-SemiBoldGiga.woff2) format(woff2);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}

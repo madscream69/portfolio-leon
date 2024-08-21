@@ -1,0 +1,40 @@
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'TRY Grtsk', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    overflow: auto;
+    overflow-x: hidden;
+    min-width: 300px;
+
+    position: relative;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+main {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+}
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    //hz nado li eto, no mne ponadobilos
+    height: 100%;
+}
+.container-fluid {
+    max-width: 1920px;
+    padding: 0 10px;
+    margin: 0 auto;
+}

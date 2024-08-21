@@ -1,0 +1,9 @@
+gulp - common start dev-serv
+gulp building - finish into dist directory
+gulp sprite - if we need to transform all svg's into sprite
+if we use sprite everywere in project, and we add some new svg's, we have to:
+stop gulp(default)
+if we already have directory(stack) and sprite.svg we have to remove it 
+and after that we have to start: gulp sprite
+when it's all done and we wanna build our project to '/dist' directory
+we run: gulp build
