@@ -1,6 +1,8 @@
 .header {
     background-color: $black;
     height: 70px;
+    z-index: 100;
+
     &__wrapper {
         width: 100%;
         height: 100%;
@@ -35,7 +37,7 @@
         align-items: center;
         gap: 28px;
     }
-    &__catalog-text {
+    &__catalog-btn-text {
         display: block;
         font-family: 'TRYGrtskSemiBoldGiga';
         font-weight: 700;
@@ -43,7 +45,7 @@
         text-transform: uppercase;
         color: #fff;
     }
-    &__catalog {
+    &__catalog-btn {
         display: flex;
         gap: 14px;
         align-items: center;
@@ -54,6 +56,7 @@
         border: none;
         cursor: pointer;
         position: relative;
+        user-select: none;
 
         transition: background-color 0.5s ease-in-out;
         z-index: 100;
@@ -126,6 +129,116 @@
             transform: rotateZ(45deg) translateX(-6px) translateY(6px);
         }
     }
+    &__catalog {
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        transform: translateY(-1000px);
+        z-index: -1;
+        &--open {
+            transform: translateY(0);
+            animation-name: example;
+            animation-duration: 1s;
+        }
+    }
+    &__catalog-wrapper {
+        padding: 40px 40px 80px 40px;
+
+        //temp
+        background: #7b7b7b3c;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 80px;
+        row-gap: 60px;
+    }
+    &__catalog-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__catalog-head-link {
+        font-family: 'TRYGrtskSemiBoldGiga';
+
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #a77118;
+    }
+    &__catalog-title {
+        font-family: 'TRYGrtskSemiBoldGiga';
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #171719;
+    }
+    &__catalog-item {
+        padding: 20px 0 20px 0;
+    }
+    &__catalog-link {
+        font-family: 'TRYGrtskMediumExa';
+        display: block;
+        font-weight: 400;
+        font-size: 16px;
+        color: #171719;
+        position: relative;
+        &::after {
+            content: url('../images/arrow.svg');
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+        }
+    }
+    &__search {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #fff;
+        transform: translateY(-200px);
+        z-index: -1;
+        &--open {
+            transform: translateY(0);
+            animation-name: example;
+            animation-duration: 0.5s;
+        }
+    }
+    &__search-wrapper {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__search-icon {
+        width: 20px;
+        height: 20px;
+    }
+    &__search-input {
+        width: 100%;
+        border: none;
+        outline: none;
+        &::placeholder {
+            font-family: 'TRYGrtskMediumExa';
+            font-weight: 400;
+            font-size: 16px;
+            color: rgba(23, 23, 25, 0.5);
+        }
+    }
+    &__search-btn {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
 }
 @keyframes show {
     from {
@@ -133,5 +246,21 @@
     }
     to {
         opacity: 1;
+    }
+}
+@keyframes example {
+    from {
+        transform: translateY(-1000px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+@keyframes example2 {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0px);
     }
 }
