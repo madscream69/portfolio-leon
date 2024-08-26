@@ -37,3 +37,25 @@ document.querySelector('.header__search-btn').addEventListener('click', () => {
         .classList.remove('header__search--open');
     document.querySelector('.header__search').style.zIndex = '-1';
 });
+document.querySelector('.header__icon-link').addEventListener('click', (e) => {
+    e.preventDefault();
+    document
+        .querySelector('.header__icon-img')
+        .classList.toggle('header__icon-img--active');
+    if (document.querySelector('.header__icon-img--active')) {
+        document.querySelector('.header__icon-img--active').src =
+            'images/phone_gold.svg';
+        document
+            .querySelector('.header__phone')
+            .classList.add('header__phone--open');
+        setTimeout(() => {
+            document.querySelector('.header__phone').style.zIndex = '1';
+        }, 500);
+    } else {
+        document.querySelector('.header__icon-img').src = 'images/phone.svg';
+        document
+            .querySelector('.header__phone')
+            .classList.remove('header__phone--open');
+        document.querySelector('.header__phone').style.zIndex = '-1';
+    }
+});
