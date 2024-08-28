@@ -1,0 +1,87 @@
+.footer {
+    background-color: $black;
+    padding-top: 80px;
+    &__logo {
+        width: 170px;
+        height: 54px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 80px;
+    }
+    &__catalog,
+    &__buyers,
+    &__showroom {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__showroom {
+        flex-basis: 40.5%;
+    }
+    &__showroom-columns {
+        display: flex;
+        justify-content: space-between;
+        gap: 48px;
+    }
+    &__showroom-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__title {
+        font-family: 'TRYGrtskSemiBoldExa';
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    &__text {
+        font-family: 'TRYGrtskMediumExa';
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #fff;
+        font-family: 'TRYGrtskMediumExa';
+    }
+    &__link-text {
+        font-family: 'TRYGrtskMediumExa';
+        font-weight: 500;
+        font-size: 14px;
+
+        color: #fff;
+    }
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+    &__bottom {
+        border-top: 1px solid #ffffff28;
+        padding: 40px 0;
+    }
+    &__bottom-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bottom-text,
+    &__bottom-link {
+        font-family: 'TRYGrtskMediumExa';
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+        opacity: 0.5;
+    }
+    &__bottom-link {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+    }
+}
